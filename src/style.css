@@ -1,0 +1,9 @@
+.tableStyle {
+    height: 20vh;
+    height: 50vh;
+    overflow: auto;
+}
+
+form {
+    width: 20vw;
+}
