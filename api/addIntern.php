@@ -15,6 +15,9 @@ $data = json_decode(file_get_contents("php://input"));
 $internClass = (new internClass());
 
 $internClass->name = $data->name;
+$internClass->birthdate = $data->birthdateIntern;
+$internClass->city = $data->city;
+$internClass->adress = $data->adress;
 $internClass->category = $data->category;
 $internClass->begin_internship = $data->begin_internship;
 $internClass->end_internship = $data->end_internship;

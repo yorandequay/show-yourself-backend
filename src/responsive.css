@@ -1,0 +1,68 @@
+@media screen and (max-width: 1112px) {
+    .bigLogo {
+        display: none;
+    }
+
+    .smallLogo {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1112px) {
+    .smallLogo {
+        display: none;
+    }
+
+    .bigLogo {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .navTabBig {
+        display: none;
+    }
+
+    .tab {
+        overflow: auto;
+        height: 100vh;
+        width: 100%;
+        background-color: #FFFFFF;
+        border-radius: 0;
+        box-shadow: -5px 7px 15px -2px #154273;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .smallNavTab {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    .respTable {
+        display: none;
+    }
+    .respTableHead {
+        display: none;
+    }
+    .nextTable {
+        display: block;
+    }
+
+    .backTableBtn {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 484px) {
+    /*.backTable {*/
+        /*display: none;*/
+    /*}*/
+}
