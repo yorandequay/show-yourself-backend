@@ -30,16 +30,15 @@ document.getElementById("navOverviewSmall").onclick = () => {
 
 //Function to hide second table
 document.getElementById("nextTable").onclick = () => {
-    document.getElementById("respBegin").classList.remove("respTableHead");
-    document.getElementById("respEnd").classList.remove("respTableHead");
+    document.getElementById("respInternship").classList.remove("respTableHead");
     document.getElementById("respGroup").classList.remove("respTableHead");
     const showTable = document.getElementsByClassName('hideTable');
     Array.prototype.forEach.call(showTable, function (tableElement) {
         const id = tableElement.dataset.index;
         document.getElementById(id).classList.remove("respTable");
     });
-    document.getElementById("backID").classList.add("respTableHead");
     document.getElementById("backName").classList.add("respTableHead");
+    document.getElementById("backResidence").classList.add("respTableHead");
     document.getElementById("backCategory").classList.add("respTableHead");
     const hideTable = document.getElementsByClassName('backTable');
     Array.prototype.forEach.call(hideTable, function (tableElement) {
@@ -51,16 +50,15 @@ document.getElementById("nextTable").onclick = () => {
 
 // Function to hide first table
 document.getElementById("backTableBtn").onclick = () => {
-    document.getElementById("respBegin").classList.add("respTableHead");
-    document.getElementById("respEnd").classList.add("respTableHead");
+    document.getElementById("respInternship").classList.add("respTableHead");
     document.getElementById("respGroup").classList.add("respTableHead");
     const showTable = document.getElementsByClassName('hideTable');
     Array.prototype.forEach.call(showTable, function (tableElement) {
         const id = tableElement.dataset.index;
         document.getElementById(id).classList.add("respTable");
     });
-    document.getElementById("backID").classList.remove("respTableHead");
     document.getElementById("backName").classList.remove("respTableHead");
+    document.getElementById("backResidence").classList.remove("respTableHead");
     document.getElementById("backCategory").classList.remove("respTableHead");
     const hideTable = document.getElementsByClassName('backTable');
     Array.prototype.forEach.call(hideTable, function (tableElement) {
