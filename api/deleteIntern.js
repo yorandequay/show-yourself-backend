@@ -1,5 +1,11 @@
-document.querySelector("#deleteBtn").addEventListener("click", () => {
-    console.log("test");
-   const deleteID = document.querySelector("#deleteBtn").dataset.id;
-   console.log(deleteID);
-});
+function deleteBtn(delId) {
+    jQuery.ajax({
+        url:'api/deleteIntern.php',
+        type:'post',
+        data:'id='+delId,
+        success: function () {
+            alert('De gebruiker is verwijderd.');
+            jQuery('#del'+delId).remove();
+        }
+    });
+}

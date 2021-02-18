@@ -17,6 +17,7 @@ require_once("src/classes/internClass.php");
         <link rel="stylesheet" href="src/style.css">
         <link rel="stylesheet" href="src/responsive.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="tab">
@@ -35,6 +36,6 @@ require_once("src/classes/internClass.php");
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <script src="src/javascript/changeTabs.js"></script>
-        <script src="/api/deleteIntern.js"></script>
+        <script src="api/deleteIntern.js"></script>
     </body>
 </html>

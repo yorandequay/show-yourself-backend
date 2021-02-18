@@ -31,14 +31,6 @@ class internClass
             $stmt = $connection->prepare('INSERT INTO `intern` SET name = :name, birthdate = :birthdate, city = :city,
             adress = :adress, category = :category, begin_internship = :begin_internship, 
             end_internship = :end_internship, groupID = :groupID');
-            $this->name = htmlspecialchars($this->name);
-            $this->birthdate = htmlspecialchars($this->birthdate);
-            $this->city = htmlspecialchars($this->city);
-            $this->adress = htmlspecialchars($this->adress);
-            $this->category = htmlspecialchars($this->category);
-            $this->begin_internship = htmlspecialchars($this->begin_internship);
-            $this->end_internship = htmlspecialchars($this->end_internship);
-            $this->groupID = htmlspecialchars($this->groupID);
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':birthdate', $this->birthdate);
             $stmt->bindParam(':city', $this->city);
@@ -51,6 +43,24 @@ class internClass
             return json_encode([
                 'type' => 'success',
                 'msg' => 'Stagiaire is succesvol toegevoegd'
+            ]);
+        } catch (PDOException $e) {
+            return json_encode([
+                'type' => 'error',
+                'msg' => $e->getMessage()
+            ]);
+        }
+    }
+
+    public function deleteIntern($id) {
+        try {
+            $connection = (new dbClass())->connect();
+            $stmt = $connection->prepare('DELETE FROM `intern` WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            return json_encode([
+                'type' => 'success',
+                'msg' => 'Stagiaire is succesvol verwijderd'
             ]);
         } catch (PDOException $e) {
             return json_encode([
